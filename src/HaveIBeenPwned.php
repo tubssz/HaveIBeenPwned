@@ -49,6 +49,10 @@ class HaveIBeenPwned
         return $this->get("breachedaccount/" . urlencode($account));
     }
 
+    public function checkPasswd($passwd) {
+        return $this->get("pwnedpassword/" . urlencode($passwd));
+    }
+
     public function getBreaches() {
         return $this->get("breaches");
     }
